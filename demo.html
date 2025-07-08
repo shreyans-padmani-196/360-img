@@ -1,0 +1,543 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360</title>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    
+    <!-- Bootstrap Css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Pannellum Css Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    
+    
+    <!-- FontAwesome Link - Start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- FontAwesome Link - End -->
+
+    <!-- Custom Css Link -->
+    <link href="https://www.visualez.com/360/assets/style.css" rel="stylesheet">
+    <link href="https://www.visualez.com/360/assets/custom.css" rel="stylesheet">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1154.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+    
+<style>
+    .expired-text {
+                color: white;
+              }
+    .pnlm-hotspot {
+        height: 60px;
+        width: 60px;
+        background-image: url(https://www.visualez.com/360/assets/images/up.png);
+        /* background-image: url(https://visualez-storage.s3.ap-south-1.amazonaws.com/Images/icon/clickicon.png); */
+        /* border-radius: 13px; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: scene 1.15s steps(12) infinite;
+        /* overflow: hidden; */
+    }
+    @keyframes scene {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 0 -720px;
+        }
+    }
+    .pnlm-hotspot-base::after {
+        content: "Click Here";
+        position: absolute;
+        top: -30px; /* Adjust the distance from the top of the hotspot */
+        left: 50%; /* Position the text in the center */
+        transform: translateX(-50%);
+        background-color: rgb(35 33 33 / 61%); /* Set a background color */
+        padding: 5px; /* Add padding for better readability */
+        border-radius: 5px; /* Add border-radius for rounded corners */
+        white-space: nowrap; /* Prevent text from wrapping */
+        color: #fff;
+        font-size: 10px;
+    }
+    .pnlm-hotspot.pnlm-info {
+        background-position: 0;
+    }
+    .pnlm-hotspot-base span {
+        width: 275px!important;
+        max-width: fit-content!important;
+    }
+    .pnlm-hotspot-base span img {
+        max-width: -webkit-fill-available!important;
+    }
+    div.pnlm-tooltip span {
+        visibility: hidden;
+        position: absolute;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.7);
+        color: #fff;
+        text-align: center;
+        max-width: 200px;
+        padding: 10px 10px;
+        margin-left: -220px;
+        cursor: default;
+    }
+    
+    .modal2 {
+      display: none;
+      position: fixed;
+      z-index: 500;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .modal2-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+</style>
+            <div id="myModal" class="modal2">
+        <!-- Modal content -->
+        <div id="modal2-content" class="modal2-content">
+            <div style="margin-top: 10px;">
+          <div id="popup-container" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 80vw; max-height: 80vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="z-index: 99;position: absolute; top: 0; right: 0; padding: 1%; background-color: transparent; border: transparent;">
+            <img src="https://visualez.com/360/assets/images/close-btn.png" width="30px">
+        </button>
+        <img id="previewImg" src="" style="width: auto;" width="269" height="558">
+        <div id="info-display" style="position: absolute; top: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px;">
+            <h5 class="modal-title" id="hotspotLabel" style="font-size: 10px;max-width: 146px;"></h5>
+        </div>
+        <div id="info-display" style="position: absolute; bottom: 10px; right: 10px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 5px;">
+            <!-- <h5 class="modal-title" id="hotspotLogo" style="font-size: 10px;max-width: 146px;">hbjhdbhjf</h5> -->
+            
+                                    <img class="design-image" style="max-width: 60px;" src="https://visualez.com/users/16553/logo.png" alt="logos" title="Logo">
+                            </div>
+    </div>
+    
+    
+            </div>
+        </div>
+    </div>
+<style>
+@media (max-width: 600px) {
+    .close {
+        padding: 5%; /* Adjust the percentage for larger size on mobile screens */
+    }
+}
+@media (min-width: 600px) {
+    #popup-container {
+        max-width: 40vw!important;
+    }
+}
+</style>
+    <div class="design">
+        <div>
+                            <img class="design-image" src="https://visualez.com/users/16553/logo.png" alt="logos" title="Logo">
+            <!-- <img class="design-image" src="https://user-platform-oss.kujiale.com/2021/01/05/S2IB3OTI5HRHAZ4XLQM6YLA8_897x459.png?x-oss-process=image/format,webp/quality,q_100|image/resize,w_240|image/format,webp/quality,q_80|image/resize,w_200  alt="logos" title="Logo"> -->
+            
+
+            <div id="show-hidden-Design" class="floorplan-guider-level-selector multi">
+                <p class="position"><span class="position-text">Change Room </span><span class="position-level"></span></p> 
+                <p class="position-name"><span id="roomName" class="position-name">Bedroom</span>
+                <span class="position-pointer">
+                    <i class="fa-solid fa-location-arrow"></i>
+                </span></p>
+            </div>
+
+        </div>
+        <div class="dropdown">
+            <span title="Share" style="color:white;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-share-alt" aria-hidden="true"></i></span>
+            <span title="musicBtn" onclick="toggleMusic()" id="music-icon" class="music-icon" style="color:white; cursor: pointer;"><i id="musicBtn" class="fa-sharp fa-solid fa-music"></i></span>
+            <span title="Info" style="color:white;" id="show-hidden-info"><i class="fa-solid fa-info"></i></span>
+                            <!-- <span title="Info" style="color:white;"  onclick="captureScreenshot()" id="screenshot"><i class="fa-solid fa-camera"></i></span> -->
+            <ul class="dropdown-menu" onclick="event.stopPropagation()" aria-labelledby="dropdownMenuButton1" style="transform: translate(-28px, 18px);">
+                <li title="Facebook"><a class="dropdown-item" target="_blank" href="http://www.facebook.com/sharer.php?u=https://merino.3dview.app/841101/841631/841634"><i style="color: #3b5998;" class="fa-brands fa-square-facebook"></i></a></li>
+                <li title="Twitter"><a class="dropdown-item" target="_blank" href="https://twitter.com/share?url=https://merino.3dview.app/841101/841631/841634&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"><i style="color: #00acee;" class="fa-brands fa-square-twitter"></i></a></li>
+                <li title="LinkedIn"><a class="dropdown-item" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://merino.3dview.app/841101/841631/841634"><i style="color: #0072b1;" class="fa-brands fa-linkedin"></i></a></li>
+                <li title="Copy to Clipboard" style="cursor: pointer;" onclick="copy('https://merino.3dview.app/841101/841631/841634','#copy_button_1')" id="copy_button_1" class="copy-button"><i style="color: #5A5A5A;" class="fa-solid fa-copy"></i></li>
+            </ul>
+        </div>  
+    </div>
+    <div class="footerMain d-none" style="">
+        <div class="index-module__bottom-container" style="transform: translateX(-50%);">
+            <div class="index-module__arrow-container"><img alt="" width="40" height="20" src="//qhstaticssl.kujiale.com/newt/18/image/png/1574166391446/C4CCE924A11F240AE20452D1FF13EF87.png"></div>
+            <div class="index-module__left" style="overflow-x: visible;">
+                <div class="index-module__info-container">
+                                            <img src="visualez.com/users/16553/logo.png" data-kioid="logo" class="index-module__pc-pano-logo">
+                </div>
+            </div>
+            <div class="index-module__right">
+                <div class="index-module__mainMenu-container">
+                    <div data-kioid="button-room-picker" class="mainMenu-button ">
+                    <div class="icon-container">
+                            <span title="Room Select" style="color:white;" id="show-hidden-Designold"><i class="fa-solid fa-bars"></i></span>
+                    </div>
+                    <div class="text">Design Select</div>
+                    </div>
+                    <div data-kioid="backgroundMusic" class="mainMenu-button  ">
+                    <div class="icon-container">
+                        <span title="musicBtn" style="color:white; cursor: pointer;"><i id="musicBtn" class="fa-solid fa-volume-off"></i></span>
+                    </div>
+                    <div id="musicstate" class="text">Music Off</div>
+                    </div>
+                    <div style="height: 100%;">
+                    <div data-kioid="button-more-tool" class="mainMenu-button ">
+                        <div class="icon-container">
+                            <span title="Info" style="color:white;" id="show-hidden-info1"><i class="fa-solid fa-info"></i></span>
+                        </div>
+                        <div class="text">More</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="footer" style="">
+                        <div class="inner-footer">
+                <ul class="list p-0">
+            <li>Laminate</li>
+                    <li>14016 Malmok Natal Walnut Merino Laminet</li>
+                    <li>1200x2400</li>
+                    <li>Matt</li>
+                </ul>
+            </div>
+            <div class="vr p-0"></div>
+                                <div class="inner-footer">
+                    <ul class="list p-0">
+                <li>Laminate</li>
+                        <li>14020 Merbek Natal Walnut Merino Laminet</li>
+                        <li>1200x2400</li>
+                        <li>Matt</li>
+                    </ul>
+                </div>
+                                        <div class="vr p-0"></div>
+                    
+        <div class="footer-btn">
+            <!-- <span title="Info" style="color:white;" id="show-hidden-info-off"><i class="fa-solid fa-times-circle"></i></span> -->
+           <!-- <button>Powered By <b>Visualze</b></button> -->
+        </div>
+    </div>
+    
+    <!-- Pannellum base div -->
+    <div id="panorama" style="position: relative;" class="pnlm-container" tabindex="0"><div class="pnlm-ui pnlm-grab"><div class="pnlm-dragfix"></div><span class="pnlm-about-msg" style="left: 1059px; top: 166px; display: none; opacity: 0;"><a href="https://pannellum.org/" target="_blank">Pannellum</a></span><div class="pnlm-sprite pnlm-hot-spot-debug-indicator" style="display: none;"></div><div class="pnlm-panorama-info" style="display: none;"><div class="pnlm-title-box"></div><div class="pnlm-author-box"></div></div><div class="pnlm-load-box" style="display: none;"><p>Loading up an amazing 3D View...</p><div class="pnlm-lbox"><div class="pnlm-loading"></div></div><div class="pnlm-lbar"><div class="pnlm-lbar-fill" style="width: 100%;"></div></div><p class="pnlm-lmsg"></p></div><div class="pnlm-error-msg pnlm-info-box"></div><div class="pnlm-controls-container"><div class="pnlm-zoom-controls pnlm-controls" style="display: block;"><div class="pnlm-zoom-in pnlm-sprite pnlm-control"></div><div class="pnlm-zoom-out pnlm-sprite pnlm-control"></div></div><div class="pnlm-fullscreen-toggle-button pnlm-sprite pnlm-fullscreen-toggle-button-inactive pnlm-controls pnlm-control" style="display: block;"></div></div><div class="pnlm-load-button" style="display: none;"><p>Click to<br>Load<br>Panorama</p></div><div class="pnlm-compass pnlm-controls pnlm-control" style="display: none;"></div></div><div class="pnlm-render-container"><canvas style="height: 100%; width: 100%;" width="2880" height="1156"></canvas><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-pointer" style="visibility: hidden; transform: translate(-185657px, -4026px) translateZ(9999px) rotate(0deg);"></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-pointer" style="visibility: hidden; transform: translate(-249270px, 54103.6px) translateZ(9999px) rotate(0deg);"></div></div></div>
+        <div class="optiontbl optiontblbackdesign" style="display: none; transform: translateX(-50%);">
+            
+        <!-- <div class="table-responsive optiontbl">  -->
+        <div class="table-responsive "> 
+            <center>  
+                <div style="display: inline-flex;">
+                    <a href="?view=841101"><div class="optionTd activelink" style="background-image: url(https://d11yhzol7igrnw.cloudfront.net/fit-in/300x200/cloudrender/360views/657af59a74a0b98468072934_0000.jpg)"><i class="fa-solid fa-check"></i></div><h5 class="optionTitle">Bedroom</h5></a><a href="?view=841631"><div class="optionTd " style="background-image: url(https://d11yhzol7igrnw.cloudfront.net/fit-in/300x200/cloudrender/360views/658017ed9fecce3cbd08c7f6_0000.jpg)"></div><h5 class="optionTitle">Kitchen</h5></a><a href="?view=841634"><div class="optionTd " style="background-image: url(https://d11yhzol7igrnw.cloudfront.net/fit-in/300x200/cloudrender/360views/65801c430b2d7c59bf076b63_0000.jpg)"></div><h5 class="optionTitle">Reception</h5></a>                    </div>
+            </center>  
+            </div>
+        </div>
+    <!-- Bootstrap Js Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <!-- Query Js Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Pannellum JS Link -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script> -->
+
+    <script src="https://visualez.com/360Development/assets/js/libpannellum.js"></script>
+    <script src="https://visualez.com/360Development/assets/js/pannellum.js"></script>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+    <script>
+        const version = new Date().getTime();
+        const imageUrl = "https://visualez-storage.s3.ap-south-1.amazonaws.com/cloudrender/360views/657af59a74a0b98468072934_0000.jpg";
+        const updatedImageUrl = imageUrl + '?' + version;
+        itemIndex = 0;
+        itemImageUrl = "";
+                        hotspot = [{"pitch":"1.292949448228694","yaw":"17.783964694587066","type":"info","img_url":"https:\/\/visualez-storage.s3.ap-south-1.amazonaws.com\/tiles\/combined\/14016 Malmok Natal Walnut Merino Laminet_120_240_Matt_Tiles Demo.jpg","display_text":"14016 Malmok Natal Walnut Merino Laminet  1200 mm X 2400 mm  Matt","text":"<h5>14016 Malmok Natal Walnut Merino Laminet <br> 1200 mm X 2400 mm <br> Matt<\/h5><img src=\"https:\/\/visualez-storage.s3.ap-south-1.amazonaws.com\/tiles\/combined\/14016 Malmok Natal Walnut Merino Laminet_120_240_Matt_Tiles Demo.jpg\">"},{"pitch":"-12.123832723965053","yaw":"144.35950393016594","type":"info","img_url":"https:\/\/visualez-storage.s3.ap-south-1.amazonaws.com\/tiles\/combined\/14020 Merbek Natal Walnut Merino Laminet_120_240_Matt_Tiles Demo.jpg","display_text":"14020 Merbek Natal Walnut Merino Laminet  1200 mm X 2400 mm  Matt","text":"<h5>14020 Merbek Natal Walnut Merino Laminet <br> 1200 mm X 2400 mm <br> Matt<\/h5><img src=\"https:\/\/visualez-storage.s3.ap-south-1.amazonaws.com\/tiles\/combined\/14020 Merbek Natal Walnut Merino Laminet_120_240_Matt_Tiles Demo.jpg\">"}];
+            ;
+    var x = screen.width;
+        var y = screen.height;
+        // console.log("width " + x + " height " + y);
+        var fov = 0;
+        if (x > y) {
+          fov = 90
+        } else {
+          fov = 50
+        }
+        /* 3D Image Viewer (Pannellum https://pannellum.org/) - Start */
+        function getMeta(url, callback) {
+            const img = new Image();
+            img.src = url;
+            img.onload = function() { callback(this.width, this.height); }
+        }
+
+        $( document ).ready(function() {
+            loadSize();
+        });
+
+        $( window ).bind("resize", function(){
+            loadSize();
+        });
+
+        
+        function loadSize() {
+            if (hotspot[itemIndex] && hotspot[itemIndex].img_url) {
+
+                getMeta(
+                    hotspot[itemIndex].img_url,
+                    (width, height) => {
+                        var previewImg = document.getElementById('previewImg');
+                        var screenHeight = window.innerHeight;
+                        var screenWidth = window.innerWidth;
+                        var secHeight = 0;
+                        var secWidth = 0;
+
+                        if ((screenHeight < height) && (height > width)) {
+                            var ratioD = width / height;
+                            secWidth = screenHeight * ratioD;
+                            secHeight = screenHeight;
+
+                            if (secWidth > screenWidth) {
+                                secHeight = screenWidth / ratioD;
+                                secWidth = screenWidth;
+                            }
+                        } else if ((screenWidth < width) && (width > height)) {
+                            previewImg.style.transform = 'rotate(90deg)';
+                            var tempHeight = height;
+                            height = width;
+                            width = tempHeight;
+                            var ratioD = height / width;
+                            secWidth = screenWidth;
+                            secHeight = screenWidth * ratioD;
+
+                            if (secHeight > screenHeight) {
+                                secHeight = screenHeight;
+                                secWidth = secHeight / ratioD;
+                            }
+                        } else {
+                            if (height > width) {
+                                var ratioD = width / height;
+                                secWidth = screenHeight * ratioD;
+                                secHeight = screenHeight;
+
+                                if (secWidth > screenWidth) {
+                                    secHeight = screenWidth / ratioD;
+                                    secWidth = screenWidth;
+                                }
+                            } else {
+                                var ratioD = height / width;
+                                secWidth = screenWidth;
+                                secHeight = screenWidth * ratioD;
+
+                                if (secHeight > screenHeight) {
+                                    secHeight = screenHeight;
+                                    secWidth = secHeight / ratioD;
+                                }
+                            }
+                        }
+
+                        previewImg.width = secWidth - 20;
+                        previewImg.height = secHeight - 20;
+                    }
+                );
+            } else {
+                console.error('img_url is undefined or null in hotspot[itemIndex].');
+            }
+        }
+
+
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            document.getElementById("previewImg").src = "";
+            $('#hotspotLabel').html("");
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        var openModal=function(){
+            for (var hspt = 0; hspt < hotspot.length; hspt++) {
+                if(this.pitch == hotspot[hspt].pitch && this.yaw == hotspot[hspt].yaw){
+                    itemIndex = hspt;
+                    document.getElementById("previewImg").src = hotspot[hspt].img_url;
+                    $('#hotspotLabel').html(hotspot[hspt].display_text);
+                    setTimeout(function() {
+                        var modal = document.getElementById("myModal");
+                        modal.style.display = "block";
+                    }, 500);
+                }
+            }
+
+        };
+        const viewer = pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": updatedImageUrl,
+                            "hotSpots": [{"pitch":1.292949448228694,"yaw": 17.783964694587066,"type":"info","text":"", "clickHandlerFunc": openModal},{"pitch":-12.123832723965053,"yaw": 144.35950393016594,"type":"info","text":"", "clickHandlerFunc": openModal},],
+                            "autoLoad": true,
+    "autoRotate": '-20',
+          "hfov": fov,
+          "minHfov": 30,
+          "maxHfov": 100,
+          "pitch": '-5',
+            "preview": "https://www.visualez.com/360/assets/images/Loading Screen Windows.jpg"
+        });
+        /* 3D Image Viewer (Pannellum https://pannellum.org/) - End */
+
+
+
+        /* Change the Loading Bar Text - Start */
+        let txt = document.getElementsByTagName("p")[2].innerHTML = "Loading up an amazing 3D View...";
+        let roomName = document.getElementById("roomName").innerHTML = "Bedroom";
+
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     let txt = document.getElementsByClassName("p")[0];
+        //     if (txt) {
+        //         txt.innerHTML = "Loading up an amazing 3D View...";
+        //     }
+        // });
+        /* Change the Loading Bar Text - End */
+
+
+
+        /* Show and Hide the Bottom Bar - Start */
+        $(document).ready(function() {
+            $("#fooT").slideUp("slow");
+            $('#show-hidden-info').click(function() {
+                $('.footer').slideToggle("slow");
+                $('.footerMain').slideUp("slow");
+                $('.optiontbl').slideUp("slow");
+                viewer.stopAutoRotate();
+                // var deleyrotate = 500000;
+            });
+            $('#show-hidden-Design').click(function() {
+                $('.optiontbl').slideToggle("slow");
+                $('.footerMain').slideUp("slow");
+                $('.footer').slideUp("slow");
+                viewer.stopAutoRotate();
+                // var deleyrotate = 500000;
+            });
+            $("#panorama").click(function() {
+                $('.optiontbl').slideUp("slow");
+                $('.footer').slideUp("slow");
+                $('.footerMain').slideUp("slow");
+                // setTimeout(startAutoRotation, 4000);
+            });
+        });
+        /* Show and Hide the Bottom Bar - End */
+
+
+
+        /* Show Tooltip on click the Copy to Clipboard - Start */
+        function copy(text, target) {
+        setTimeout(function() {
+        $('#copied_tip').remove();
+        }, 800);
+        $(target).append("<div class='tip' id='copied_tip'>Copied!</div>");
+        var input = document.createElement('input');
+        input.setAttribute('value', text);
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(input)
+        return result;
+        }
+        /* Show Tooltip on click the Copy to Clipboard - End */
+
+
+        /* Disable Right-Click Menu - Start*/
+        $(function() {
+            $(this).bind("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        });
+        /* Disable Right-Click Menu - End*/
+        let autoRotationTimeout;
+
+
+        // Function to start auto-rotation after a delay
+        function startAutoRotation() {
+            viewer.startAutoRotate();
+        }
+        
+
+
+        // Listen for mouseup and touchend events to start auto-rotation after a delay
+        var deleyrotate = 2000;
+        document.addEventListener('mouseup', () => {
+            // clearTimeout(autoRotationTimeout);
+            // autoRotationTimeout = setTimeout(startAutoRotation, deleyrotate); // Start after a 2-second delay
+        });
+
+//************************************ Take Screenshot and save ***********************************************************
+function captureScreenshot(){
+    if (viewer.isLoaded()) {
+        savePanoImage(viewer);
+    }
+}
+
+function savePanoImage(id) {
+    var currentURL = window.location.href;
+    var parts = currentURL.split('/');
+    var viewId = parts[parts.length - 1];
+    var viewer = eval(id);
+    var img = viewer.getRenderer().render(viewer.getPitch() / 180 * Math.PI,
+        viewer.getYaw() / 180 * Math.PI,
+        viewer.getHfov() / 180 * Math.PI,
+        {'returnImage': true});
+
+    var link = document.createElement('a');
+    link.download = viewId+'.jpeg';
+    link.href = img;
+    link.click();
+}
+    </script>
+    
+    <script>
+        const musicSources = [
+            'https://visualez.com/backgraundMusic/Winter-Long-Version.mp3',
+            'https://visualez.com/backgraundMusic/Memories-of-Spring.mp3',
+            'https://visualez.com/backgraundMusic/melody-of-nature.mp3',
+        ];
+
+        let isMusicPlaying = false;
+        let audio;
+
+        function toggleMusic() {
+            if (isMusicPlaying) {
+            audio.pause();
+            // document.getElementById('musicBtn').className = 'fa-solid fa-volume-off';
+            // document.getElementById('musicstate').innerHTML = 'Music Off';
+            document.getElementById('music-icon').classList.add('music-icon');
+            isMusicPlaying = false;
+            } else {
+            // If music is not playing, play random music and change the icon to pause
+            const randomIndex = Math.floor(Math.random() * musicSources.length);
+            const randomMusicUrl = musicSources[randomIndex];
+            audio = new Audio(randomMusicUrl);
+            audio.play();
+            document.getElementById('music-icon').classList.remove('music-icon');
+            // document.getElementById('musicBtn').className = 'fa-solid fa-music ';
+            // document.getElementById('musicstate').innerHTML = 'Music On';
+            isMusicPlaying = true;
+
+            // Listen for the 'ended' event to restart the music when it finishes
+            audio.addEventListener('ended', function() {
+                toggleMusic();
+            });
+            }
+        }
+        let isMusicPlayingAuto = false;
+        document.addEventListener("click", function () {
+            let isMusicPlaying = false;
+
+            if (!isMusicPlaying && !isMusicPlayingAuto) {
+                toggleMusic();
+                isMusicPlaying = true;
+                isMusicPlayingAuto = true;
+            }
+        });
+    </script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

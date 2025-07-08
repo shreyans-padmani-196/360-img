@@ -1,0 +1,169 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../css/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../css/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../css/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../css/fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../css/fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    box-sizing:border-box;
+    -webkit-box-sizing:
+    border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+}
+body {
+    font-family: 'Montserrat';
+    font-size:14px;
+    margin:0;
+}
+p,h1,h2,h3,h4,h5,h6,ul,li,a{
+    margin: 0;
+    padding:0; 
+}
+
+.loader{width: 100%; height:100%; position: fixed; top: 0px; left: 0px; background-color: #000; display: flex; justify-content: center; align-items: center; z-index: 1; transition: 0.2s; overflow: hidden; font-size: 48px;font-family: Arial, Helvetica, sans-serif; font-weight: bold;letter-spacing: 2px;box-sizing: border-box;}
+.loader::after{
+    position: absolute;
+    content: 'Loading';
+    left: 49.5%;
+  top: 65%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #fff;
+  height: 0px;
+  animation: animloader 5s linear;
+
+}
+.loader::before{
+  content: 'Loading';
+  position: absolute;
+  left: 49.5%;
+  top: 65%;
+  transform: translateX(-50%);
+  color: #a05f80;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.loader img{width: 450px;}
+
+@keyframes animloader {
+    0% {
+      height: 60px;
+    }
+    50% {
+      height: 0px;
+    }
+  }
+
+
+p{
+    font-size: 16px;
+    line-height: 30px;
+    color: #5f6783;
+}
+a {
+    text-decoration:none;
+    outline:none;
+    color:var(--theme-color-primary1);
+}
+a:hover{
+    color: #5f6783;
+}
+img {
+    vertical-align:top;
+    max-width:100%;
+    height:auto;
+    border:none;
+}
+
+.wrapper {
+    margin:0 auto;
+    padding:10px 10px;
+    max-width:1500px;/*1400px*/
+}
+
+
+body::-webkit-scrollbar { width: 12px;}
+body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); background-color:#fff;}
+body::-webkit-scrollbar-thumb {background-color:#ccc; border-radius: 50px;}
+
+
+
+.row{display: flex; flex-wrap: wrap;}
+
+
+header{padding: 0px 0px 20px;}
+.logo_img{max-width: 150px; margin: auto;}
+.logo_img img{width: 100%;}
+
+h1{color:rgb(200, 113, 13); font-size: 40px; text-transform: capitalize; margin-top: 20px;} 
+h2{color:rgb(217, 99, 31); font-weight: 35px; text-transform: capitalize; margin-top: 20px;}
+.full{display: flex; justify-content: center; align-items: center;  width: 100%; background-color: #000;}
+.full img{max-width: 500px; padding: 0px 50px;}
+.main_img_col{width: calc(90% - 140px); height: 100%;}
+.main_img{position: relative; background: url(../images/MF/MF-2108.jpg); background-size:60%; }
+.main_img img{width: 100%;}
+.select_img_section_col{width: 150px;}
+.select_img{overflow-y: auto; height: calc(90vh - 100px);}
+.select_img::-webkit-scrollbar { width: 6px;}
+.select_img::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); background-color:#fff;}
+.select_img::-webkit-scrollbar-thumb {background-color:#aaa; border-radius: 50px;}
+.select_img ul{display: flex; flex-wrap: wrap; justify-content: center; }
+.select_img ul li{list-style-type: none; overflow: hidden; font-size: 10px; text-transform: uppercase; color: #000; font-weight: 500; width: 101px; margin-bottom: 10px;}
+.select_img ul li>div{width: 100px; aspect-ratio: 1; border: 1px solid #ddd; overflow: hidden;}
+.select_img ul li>div img{transform: scale(4); cursor: pointer;}
+.select_box{text-align: center; margin-bottom: 20px;}
+.select_box select{background: url(../images/select-box-icon.png) 90% no-repeat; background-size: 9px; background-color: #000; color: #fff; padding: 10px; width: 100%; appearance: none;}
+
+.main_img_index{position: relative; overflow: hidden; width: 100%;}
+.main_full_img{position: absolute; z-index: -2; background-size: 100%; width: 100%;top: 0px; left: 0px;}
+.main_img_index>img{width: 100%; height:100%}
+
+.bedroom_2_side{width: 11%; height: 100%; position: absolute; right: 0px; top: 0px; perspective: 500px; z-index: -1; }
+.bedroom_2_side_img{width: 88%; height: 100%; position: absolute; right: 4%; transform: rotateY(-33deg) scale(2);background-size:600%;  transition:all 0.2s;}
+
+.transform{width: 100%;height: 100%; position: absolute;perspective: 500px;-webkit-perspective: 500px; top: 0px; z-index:-1;}
+.drawer_img{transform: rotateY(29deg) rotateZ(-1deg) scale(1.2);transform-origin: 0% 100% 1px;height: 135%; width: 55%; position: absolute; left: 0px; top: 30px; background: url(../images/MF/MF-2108.jpg); background-size: cover; transition:all 0.2s;}
+.tv_bottom{position: absolute;right: 0%;bottom: -8%;width: 38%; aspect-ratio: 1; background: url(../images/MF/MF-2108.jpg);transform: rotateY(-30deg) ;background-size:cover;  transition:all 0.2s; z-index: -1;}
+.tv_bottom_up{position: absolute; width: 23%;height: 9%; bottom: 18%; right:0%; background:url(../images/MF/MF-2108.jpg);transform: skew(99deg, 13deg); background-size: 400%; z-index: 1;  transition:all 0.2s;}
+.tv_right{position: absolute;perspective: 100px; width: 10%;aspect-ratio: 1; bottom: 5%; right:-5%; background:url(../images/MF/MF-2108.jpg);transform: rotateY(-60deg); background-size: 400%; z-index: 2;  transition:all 0.2s; overflow: hidden;}
+.tv_right_top{position: absolute; width: 100%;height: 100%; bottom: 80%; right:-10%; background:url(../images/MF/MF-2108.jpg);transform: skew(-41deg, -7deg); background-size: 500%; z-index: 1;  transition:all 0.2s;}
+
+/* .tv_bottom_up{position: absolute; width: 20%;height: 16%; bottom: 19%; right:5%; background:url(../images/MF/MF-2108.jpg);transform: rotateX(7deg) rotateY(5deg) rotateZ(0deg) skew(109deg, 11deg); background-size: 1358px; z-index: 1;  transition:all 0.2s;} */
+.full_bg_img{position: absolute; width: 100%; height: 100%;background: url(../images/MF/MF-2108.jpg); top: 0px; left: 0px; z-index: -2;  background-size: 100%; transition:all 0.2s;}
+.select_img ul >section{display: none;}
+.select_img ul >section:first-child{display: block;}
+.main_section.main_section_vf .full_bg_img{width: 80%; left: inherit; right: 0px; z-index: -1; background-repeat: repeat; background-size: 50%;}

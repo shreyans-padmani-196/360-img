@@ -36,13 +36,15 @@
             height: 600px;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 </head>
 
 <body>
     <div class="loader" id="abc">
-        <img src="https://theuniqueitsolution.com/Images/Png_UniqueIT.png" alt="">
+        <img src="https://theuniqueitsolution.com/static/media/logo.0da2ade63f51648aec4c.webp" alt="">
 
         <img src="1486.gif" alt="" style="    width: 50px;
                             top: 66%;
@@ -65,19 +67,37 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="">
         <div class="main_img_index main_img_height" id="canvasContainer">
             <canvas style="display: none;" id="canvas" width="5600" height="5120"></canvas>
         </div>
-        <div class="main_section" style="margin-left:10px ;">
+        <div class="main_section main-layout" >
             <div class="row">
                 <div class="main_img_col">
-                    <div class="main_img_index main_img_height" id="canvasContainer">
+                    <div class="main_img_index main_img_height preview-panel" id="canvasContainer">
                         <div id="panorama"></div>
                     </div>
                 </div>
+                <aside class="sidebar">
+                    <div class="background-list">
+                        <h3>Backgrounds</h3>
+                        <ul id="backgroundImageList">
+                            <li><img src="524.png" class="backgroundImage" data-path="524.png" /></li>
+                            <li><img src="522.png" class="backgroundImage" data-path="522.png" /></li>
+                            <li><img src="526.png" class="backgroundImage" data-path="526.png" /></li>
+                        </ul>
+                    </div>
+                    <div class="design-list">
+                        <h3>Design Overlays</h3>
+                        <ul id="designImageList">
+                            <li><img src="Empty Layer.png" class="designImage" data-path="Empty Layer.png" /></li>
+                            <li><img src="Empty Layer2.png" class="designImage" data-path="Empty Layer2.png" /></li>
+                            <li><img src="Empty Layer3.png" class="designImage" data-path="Empty Layer3.png" /></li>
+                        </ul>
+                    </div>
+                </aside>
                 <div class="select_img_section_col">
-                    <div class="select_img click select_img_height">
+                    <div class="select_img click select_img_height" style="display: none;">
                         <ul>
                             <section class="mf" id="backgroundImageList">
                                 <li>
@@ -100,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <ul style="width: 1000px; display: flex; height: 100px;" id="designImageList">
+            <ul style="width: 1000px; display: none; height: 100px;" id="designImageList">
                 <li style="margin-right: 5px;">
                     <div style="    cursor: pointer;">
                         <a> <img src="Empty Layer.png" onclick="flyToDiv(this)" id="div1" alt="" class="designImage"

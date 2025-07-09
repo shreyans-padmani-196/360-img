@@ -1,6 +1,6 @@
-
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     <style>
-       
-
         #canvas {
             border: 1px solid #ccc;
         }
@@ -19,39 +17,37 @@
         .imageUpload {
             margin-top: 10px;
         }
-     
 
-#canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
-        <style>
-            /* Styling for the loader */
-            
-       
-        </style>
+    <style>
+        /* Styling for the loader */
+    </style>
     <style>
         #panorama {
             width: 1000px;
             height: 600px;
         }
-        </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-  </head>
-  <body>
-  <div class="loader" id="abc" >
-                            <img src="https://theuniqueitsolution.com/Images/Png_UniqueIT.png" alt=""> 
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+</head>
 
-                            <img src="1486.gif" alt="" style="    width: 50px;
+<body>
+    <div class="loader" id="abc">
+        <img src="https://theuniqueitsolution.com/Images/Png_UniqueIT.png" alt="">
+
+        <img src="1486.gif" alt="" style="    width: 50px;
                             top: 66%;
                             position: absolute;
-                            right: 39%;" >
+                            right: 39%;">
     </div>
     <script>
         //  function loader(){document.querySelector('.loader').style.top = "-100%"}
@@ -64,7 +60,7 @@
         <div class="wrapper">
             <div class="logo">
                 <div class="logo_img">
-                     <img src="https://theuniqueitsolution.com/static/media/logo.0da2ade63f51648aec4c.webp" alt="">
+                    <img src="https://theuniqueitsolution.com/static/media/logo.0da2ade63f51648aec4c.webp" alt="">
                 </div>
             </div>
         </div>
@@ -75,203 +71,209 @@
         </div>
         <div class="main_section" style="margin-left:10px ;">
             <div class="row">
-                <div class="main_img_col" >
+                <div class="main_img_col">
                     <div class="main_img_index main_img_height" id="canvasContainer">
-                                <div id="panorama"></div>
-                            </div>
-                        </div>
-                        <div class="select_img_section_col">
-                            <div class="select_img click select_img_height">
-                                <ul>
-                                    <section class="mf" id="backgroundImageList">
-                                        <li>
-                                            <div>
-                                                <img src="524.png" alt="" class="backgroundImage" data-path="524.png">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <img src="522.png" alt="" class="backgroundImage" data-path="522.png">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <img src="526.png" alt="" class="backgroundImage" data-path="526.png">
-                                            </div>
-                                        </li>
-                                    </section>
-                                </ul>
-                            </div>
-                        </div>
+                        <div id="panorama"></div>
+                    </div>
                 </div>
-                <ul style="width: 1000px; display: flex; height: 100px;" id="designImageList">
-                    <li style="margin-right: 5px;">
-                        <div style="    cursor: pointer;">
-                         <a>  <img src="Empty Layer.png" onclick="flyToDiv(this)" id="div1" alt="" class="designImage" data-path="Empty Layer.png"> </a>  
-                        </div>
-                    </li>
-                    <li style="margin-right: 5px;">
-                        <div>
-                           <a style="    cursor: pointer;"><img onclick="flyToDiv(this)" src="Empty Layer2.png" alt="" class="designImage" data-path="Empty Layer2.png"></a> 
-                        </div>
-                    </li>
-                    <li style="margin-right: 5px;">
-                        <div style="    cursor: pointer;">
-                          <a> <img src="Empty Layer3.png" alt="" onclick="flyToDiv(this)" class="designImage" data-path="Empty Layer3.png"> </a>  
-                        </div>
-                    </li>
-                </ul>
-       </div>
+                <div class="select_img_section_col">
+                    <div class="select_img click select_img_height">
+                        <ul>
+                            <section class="mf" id="backgroundImageList">
+                                <li>
+                                    <div>
+                                        <img src="524.png" alt="" class="backgroundImage" data-path="524.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="522.png" alt="" class="backgroundImage" data-path="522.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="526.png" alt="" class="backgroundImage" data-path="526.png">
+                                    </div>
+                                </li>
+                            </section>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul style="width: 1000px; display: flex; height: 100px;" id="designImageList">
+                <li style="margin-right: 5px;">
+                    <div style="    cursor: pointer;">
+                        <a> <img src="Empty Layer.png" onclick="flyToDiv(this)" id="div1" alt="" class="designImage"
+                                data-path="Empty Layer.png"> </a>
+                    </div>
+                </li>
+                <li style="margin-right: 5px;">
+                    <div>
+                        <a style="    cursor: pointer;"><img onclick="flyToDiv(this)" src="Empty Layer2.png" alt=""
+                                class="designImage" data-path="Empty Layer2.png"></a>
+                    </div>
+                </li>
+                <li style="margin-right: 5px;">
+                    <div style="    cursor: pointer;">
+                        <a> <img src="Empty Layer3.png" alt="" onclick="flyToDiv(this)" class="designImage"
+                                data-path="Empty Layer3.png"> </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
-<script>
+    <script>
 
-</script>
-   <!-- Set the static paths for the background and overlay images -->
-      <script>
-     // Add event listeners to the design images
-document.querySelectorAll('.designImage').forEach(item => {
-    item.addEventListener('click', event => {
-        const imagePath = event.target.dataset.path;
-        overlayImage.src = imagePath;
-        displayLoader();
-        setTimeout(updateCanvas, 1000); // Update canvas after changing the background image with a delay of 1000 milliseconds
-        setTimeout(removeLoader, 2000); // Hide loader after a delay of 2000 milliseconds
-    });
-});
+    </script>
+    <!-- Set the static paths for the background and overlay images -->
+    <script>
+        // Add event listeners to the design images
+        document.querySelectorAll('.designImage').forEach(item => {
+            item.addEventListener('click', event => {
+                const imagePath = event.target.dataset.path;
+                overlayImage.src = imagePath;
+                displayLoader();
+                setTimeout(updateCanvas, 1000); // Update canvas after changing the background image with a delay of 1000 milliseconds
+                setTimeout(removeLoader, 2000); // Hide loader after a delay of 2000 milliseconds
+            });
+        });
 
-// Add event listeners to the background images
-document.querySelectorAll('.backgroundImage').forEach(item => {
-    item.addEventListener('click', event => {
-        const imagePath = event.target.dataset.path;
-        backgroundImage.src = imagePath;
-        displayLoader();
-        setTimeout(updateCanvas, 1000); // Update canvas after changing the background image with a delay of 1000 milliseconds
-        setTimeout(removeLoader, 2000); // Hide loader after a delay of 2000 milliseconds
-    });
-});
+        // Add event listeners to the background images
+        document.querySelectorAll('.backgroundImage').forEach(item => {
+            item.addEventListener('click', event => {
+                const imagePath = event.target.dataset.path;
+                backgroundImage.src = imagePath;
+                displayLoader();
+                setTimeout(updateCanvas, 1000); // Update canvas after changing the background image with a delay of 1000 milliseconds
+                setTimeout(removeLoader, 2000); // Hide loader after a delay of 2000 milliseconds
+            });
+        });
 
-// Function to update the canvas with the background
-var configData = {
-    DesignImagePath: "524.png",
-    BackgroundImagePath: "Empty Layer.png"
-};
+        // Function to update the canvas with the background
+        var configData = {
+            DesignImagePath: "524.png",
+            BackgroundImagePath: "Empty Layer.png"
+        };
 
-// Create the canvas and load images
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const backgroundImage = new Image();
-backgroundImage.src = configData.DesignImagePath; // Use the data from configData
-const overlayImage = new Image();
-overlayImage.src = configData.BackgroundImagePath; // Use the data from configData;
-const opacity = 1; // Full opacity
+        // Create the canvas and load images
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const backgroundImage = new Image();
+        backgroundImage.src = configData.DesignImagePath; // Use the data from configData
+        const overlayImage = new Image();
+        overlayImage.src = configData.BackgroundImagePath; // Use the data from configData;
+        const opacity = 1; // Full opacity
 
-function updateCanvas() {
-    console.log(1);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+        function updateCanvas() {
+            console.log(1);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw the background image
-    ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-    console.log(2);
+            // Draw the background image
+            const pattern = ctx.createPattern(backgroundImage, 'repeat');
+            ctx.fillStyle = pattern;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            console.log(2);
 
-    // Draw the overlay image with full opacity
-    ctx.globalAlpha = opacity;
-    ctx.drawImage(overlayImage, 0, 0, canvas.width, canvas.height);
-    console.log(3);
+            // Draw the overlay image with full opacity
+            ctx.globalAlpha = opacity;
+            ctx.drawImage(overlayImage, 0, 0, canvas.width, canvas.height);
+            console.log(3);
 
-    ctx.globalAlpha = 1; // Reset the alpha to 1 (full opacity)
-    console.log(4);
-    const panoramaDataURL = canvasToDataURL(canvas);
-    console.log(5);
+            ctx.globalAlpha = 1; // Reset the alpha to 1 (full opacity)
+            console.log(4);
+            const panoramaDataURL = canvasToDataURL(canvas);
+            console.log(5);
 
-    // Update the Pannellum viewer configuration to use the canvas image as panorama
-    pannellum.viewer('panorama', {
-        "type": "equirectangular",
-        "panorama": panoramaDataURL,
-        "autoLoad": true,
-        "autoRotate": -2,
-        "preview": panoramaDataURL // Using the same image for preview as well
-    });
-    console.log(6);
-}
+            // Update the Pannellum viewer configuration to use the canvas image as panorama
+            pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "panorama": panoramaDataURL,
+                "autoLoad": true,
+                "autoRotate": -2,
+                "preview": panoramaDataURL // Using the same image for preview as well
+            });
+            console.log(6);
+        }
 
-function canvasToDataURL(canvas) {
-    return canvas.toDataURL();
-}
+        function canvasToDataURL(canvas) {
+            return canvas.toDataURL();
+        }
 
-// Call the updateCanvas function to initially render the images
-backgroundImage.onload = function() {
-    overlayImage.onload = function() {
-        updateCanvas(); // Update canvas after changing the background image
-    };
-};
-removeLoader();
-function displayLoader() {
-    // Show loader
-    console.log(123);
-    document.querySelector(".loader").style.setProperty("top", "0%", "");
-    console.log(document.querySelector(".loader").style);
-}
+        // Call the updateCanvas function to initially render the images
+        backgroundImage.onload = function () {
+            overlayImage.onload = function () {
+                updateCanvas(); // Update canvas after changing the background image
+            };
+        };
+        removeLoader();
+        function displayLoader() {
+            // Show loader
+            console.log(123);
+            document.querySelector(".loader").style.setProperty("top", "0%", "");
+            console.log(document.querySelector(".loader").style);
+        }
 
-function removeLoader() {
-    document.querySelector(".loader").style.setProperty("top", "-1000%", "");
-    console.log(document.querySelector(".loader").style);
-    console.log(12334545);
-    // Hide loader
-}
+        function removeLoader() {
+            document.querySelector(".loader").style.setProperty("top", "-1000%", "");
+            console.log(document.querySelector(".loader").style);
+            console.log(12334545);
+            // Hide loader
+        }
 
-function flyToDiv(img) {
-  const div1 = document.getElementById('div1');
-  const div2 = document.getElementById('canvasContainer');
-  
-  // Get position of image in div1
-  const imgRect = img.getBoundingClientRect();
-  const div1Rect = div1.getBoundingClientRect();
-  
-  // Calculate position relative to viewport
-  const imgX = imgRect.left - div1Rect.left;
-  const imgY = imgRect.top - div1Rect.top;
-  
-  // Clone image and append to body to animate
-  const clonedImg = img.cloneNode(true);
-  clonedImg.style.position = 'fixed';
-  clonedImg.style.left = imgX + 'px';
-  clonedImg.style.top = imgY + 'px';
-  document.body.appendChild(clonedImg);
-  
-  // Get position of div2
-  const div2Rect = div2.getBoundingClientRect();
-  
-  // Calculate final position relative to viewport
-  const finalX = div2Rect.left - div1Rect.left;
-  const finalY = div2Rect.top - div1Rect.top;
-  
-  // Animate image to final position
-  const animationDuration = 1000; // in milliseconds
-  const framesPerSecond = 60;
-  const stepX = (finalX - imgX) / (animationDuration / (1000 / framesPerSecond));
-  const stepY = (finalY - imgY) / (animationDuration / (1000 / framesPerSecond));
-  
-  let currentX = imgX;
-  let currentY = imgY;
-  
-  const animate = setInterval(() => {
-    currentX += stepX;
-    currentY += stepY;
-    
-    clonedImg.style.left = currentX + 'px';
-    clonedImg.style.top = currentY + 'px';
-    
-    // Check if animation is complete
-    if (Math.abs(currentX - finalX) < Math.abs(stepX) && Math.abs(currentY - finalY) < Math.abs(stepY)) {
-      clearInterval(animate);
-      clonedImg.parentNode.removeChild(clonedImg); // Remove cloned image from DOM
-      div2.appendChild(img); // Move original image to div2
-    }
-  }, 1000 / framesPerSecond);
-}
-</script>
+        function flyToDiv(img) {
+            const div1 = document.getElementById('div1');
+            const div2 = document.getElementById('canvasContainer');
+
+            // Get position of image in div1
+            const imgRect = img.getBoundingClientRect();
+            const div1Rect = div1.getBoundingClientRect();
+
+            // Calculate position relative to viewport
+            const imgX = imgRect.left - div1Rect.left;
+            const imgY = imgRect.top - div1Rect.top;
+
+            // Clone image and append to body to animate
+            const clonedImg = img.cloneNode(true);
+            clonedImg.style.position = 'fixed';
+            clonedImg.style.left = imgX + 'px';
+            clonedImg.style.top = imgY + 'px';
+            document.body.appendChild(clonedImg);
+
+            // Get position of div2
+            const div2Rect = div2.getBoundingClientRect();
+
+            // Calculate final position relative to viewport
+            const finalX = div2Rect.left - div1Rect.left;
+            const finalY = div2Rect.top - div1Rect.top;
+
+            // Animate image to final position
+            const animationDuration = 1000; // in milliseconds
+            const framesPerSecond = 60;
+            const stepX = (finalX - imgX) / (animationDuration / (1000 / framesPerSecond));
+            const stepY = (finalY - imgY) / (animationDuration / (1000 / framesPerSecond));
+
+            let currentX = imgX;
+            let currentY = imgY;
+
+            const animate = setInterval(() => {
+                currentX += stepX;
+                currentY += stepY;
+
+                clonedImg.style.left = currentX + 'px';
+                clonedImg.style.top = currentY + 'px';
+
+                // Check if animation is complete
+                if (Math.abs(currentX - finalX) < Math.abs(stepX) && Math.abs(currentY - finalY) < Math.abs(stepY)) {
+                    clearInterval(animate);
+                    clonedImg.parentNode.removeChild(clonedImg); // Remove cloned image from DOM
+                    div2.appendChild(img); // Move original image to div2
+                }
+            }, 1000 / framesPerSecond);
+        }
+    </script>
 
     <!-- <script type="text/javascript" src="mf.js"></script> -->
-	<script type="text/javascript" src="ndex.js"></script>
-  </body>
+    <script type="text/javascript" src="ndex.js"></script>
+</body>
+
 </html>
